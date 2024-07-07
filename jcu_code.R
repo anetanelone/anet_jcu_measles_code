@@ -32,7 +32,7 @@ fig_data_MV1994 <-  ggplot( data = data_MV1994 ,  aes(x = day, y =  viremia,  co
   geom_hline(yintercept = 0.3, linetype = "dotdash", color = "darkgray", size=1) +
   scale_x_continuous(  breaks=c(0,  3,  5,6,  7,  9, 11, 13, 14, 17, 18 ))+
   scale_y_continuous(limits = c(0,4),breaks=c(0.3,1,2,  3,3.4,  4 ))
-#Analysis  ############################################
+#Assess code from here ##Analysis  ############################################
 cat("Data analysis of measles viral growth and decay to study measles infection dose response")
 data_MV1994_uncensored <- subset( data_MV1994,  data_MV1994$viremia >0.3   )# Consider detectable viremia, by removing  data at the limit of detection 0.3
 day_peak_10e4 <- 7;day_peak_10e2 <- 9;day_peak_10e0 <- 13 # day of the peak viremia
